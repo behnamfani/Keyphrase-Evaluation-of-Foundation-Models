@@ -37,6 +37,17 @@ Using the `pke` module, I extract keyphrases with the following constraints:
 * **Grammar**: Focuses on ADJ, NOUN, PROPN, and VERB.
 * **Refinement**: Phrases are filtered by the top 20% TF-IDF scores and top 10% frequency to eliminate noise.
 
+<p align="center">
+  <img src="/pictures/workflow.png" alt="Research Workflow" width="400">
+  <p>
+    <i>This figure illustrates the comprehensive steps undertaken in the research. During 
+    inference time, only the right side of the chart, indicated by the blue direction, 
+    is needed. This means by having the corpus and its embeddings, the steps of 
+    extracting keyphrases, creating recursive KNN graphs, and conducting keyphrase 
+    analysis are done.</i>
+  </p>
+</p>
+
 ---
 
 ## 📊 Experimental Insights
