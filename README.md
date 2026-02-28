@@ -32,6 +32,15 @@ The tool constructs a graph where each document is a node. Edges are drawn based
 * **nHops**: Defines the depth of the neighborhood (exploring neighbors of neighbors).
 * **Visual Signature**: A "decent" model produces neighborhoods with high keyphrase redundancy, indicating successful semantic mapping.
 
+<p align="center">
+  <img src="/pictures/RKNN.png" alt="Recursive KNN" width="500">
+  <p>
+    <i>Example of a node’s environment in a recursive KNN graph (K = 4, nHops = 2). Each node represents a document identified by a number. In the recursive KNN
+      graph, some nodes may appear multiple times within an environment. Each node contains a set of keyphrases. A good model should produce neighborhoods with
+      several unique nodes and many shared keyphrases.</i>
+  </p>
+</p>
+
 ### 3. Keyphrase Extraction (TextRank)
 Using the `pke` module, I extract keyphrases with the following constraints:
 * **Grammar**: Focuses on ADJ, NOUN, PROPN, and VERB.
