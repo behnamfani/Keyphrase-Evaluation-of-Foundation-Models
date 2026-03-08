@@ -84,5 +84,16 @@ The tool was tested across diverse domains to see how embedding features shift:
 
 ## 🔍 Key Findings
 * **Mean Cosine Similarity** is the most robust feature for distinguishing between different language models.
-* **Community Detection**: Using `networkx.greedy_modularity_communities`, we found that better-performing models yield more distinct, dense clusters that correlate with actual document topics.
-* **Semantic Integrity**: A "decent" model produces neighborhoods with high keyphrase redundancy, indicating that it has successfully mapped similar concepts to the same vector space.
+* The KNN graph and **keyphrase analysis evaluation** method is effective, showing correlations between keyphrase frequencies, model performance, and sensitivity to domain shift and out-of-distribution datasets.
+<p align="center">
+  <img src="/pictures/CheckPoints.png" alt="Project Logo" width="800">
+  <p>
+    <i>Later model checkpoints show a focusing effect during fine-tuning, where important keyphrase frequencies increase, common phrase frequencies decrease, and document clustering accuracy improves.</i>
+  </p>
+</p>
+<p align="center">
+  <img src="/pictures/OOD.png" alt="Project Logo" width="700">
+  <p>
+    <i>Keyphrase frequencies were weighted by multiplying them with TextRank importance scores (before and after normalization). Using embeddings from the latest checkpoint, diverse datasets (MedQuad, FEVER, Emotional-Reddit) were analyzed via KNN graphs and normalized keyphrase distributions, which effectively differentiated domains, revealed dataset characteristics (common vs. specialized terminology), and helped identify out-of-distribution datasets, while also correlating with model performance.</i>
+  </p>
+</p>
